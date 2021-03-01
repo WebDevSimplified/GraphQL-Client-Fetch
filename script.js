@@ -30,7 +30,7 @@ continentSelect.addEventListener('change', async e => {
 
 function getContinentCountries(continentCode) {
   return queryFetch(`
-    query getCountries($code: String) {
+    query getCountries($code: ID!) {
       continent(code: $code) {
         countries {
           name
